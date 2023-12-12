@@ -1,0 +1,1 @@
+# flowpipe-image-azure-cli
