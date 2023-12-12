@@ -1,4 +1,5 @@
 #!/bin/bash
+set -Eeo pipefail
 
 # Check if the AZURE_TENANT_ID environment variable is set
 if [ -z "$AZURE_TENANT_ID" ]; then
