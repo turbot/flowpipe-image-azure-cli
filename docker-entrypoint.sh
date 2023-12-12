@@ -18,12 +18,12 @@ if [ -z "$AZURE_CLIENT_SECRET" ]; then
   exit 1
 fi
 
-# set the env vars to az login
+# Use the environment variables for "az login"
 az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET --tenant $AZURE_TENANT_ID --output none
 
 # Check if there are additional arguments (commands) passed to the script
 if [ $# -eq 0 ]; then
-  echo "Error: No command provided. Usage: ./run.sh <command>"
+  echo "Error: No command provided. Usage: ./docker-entrypoint.sh <command>"
   exit 1
 fi
 
