@@ -19,6 +19,11 @@ if [ -z "$AZURE_CLIENT_SECRET" ]; then
   exit 1
 fi
 
+# Check and set the AZURE_ENVIRONMENT if provided
+if [ -n "$AZURE_ENVIRONMENT" ]; then
+  az cloud set --name $AZURE_ENVIRONMENT --only-show-errors
+fi
+
 # Use the environment variables for "az login"
 az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET --tenant $AZURE_TENANT_ID --output none
 
