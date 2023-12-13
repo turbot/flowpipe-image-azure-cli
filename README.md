@@ -2,6 +2,8 @@
 
 This image is meant to be used with [Flowpipe mods](https://hub.flowpipe.io/), in particular the [Azure](https://hub.flowpipe.io/mods/turbot/azure) and [Entra ID](https://hub.flowpipe.io/mods/turbot/entra) mods.
 
+The Azure CLI does not work only with environment variables for authentication, so this image is primarily used to run the `az login` command.
+
 ## Open Source & Contributing
 
 This repository is published under the [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0). Please see our [code of conduct](https://github.com/turbot/.github/blob/main/CODE_OF_CONDUCT.md). We look forward to collaborating with you!
